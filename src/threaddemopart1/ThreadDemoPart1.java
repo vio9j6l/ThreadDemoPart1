@@ -10,7 +10,7 @@ package threaddemopart1;
 
 public class ThreadDemoPart1 {
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws InterruptedException {
     Counter counter = new Counter();
 
     System.out.println("START");
@@ -27,6 +27,7 @@ public class ThreadDemoPart1 {
     counter.oneToTen();
      */
     t1.start();
+    t1.join();
     t2.start();
 
     // TODO 07 - use join so that the 2nd thread starts *after* the first
