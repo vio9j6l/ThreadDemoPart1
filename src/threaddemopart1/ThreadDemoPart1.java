@@ -16,12 +16,18 @@ public class ThreadDemoPart1 {
     System.out.println("START");
 
     // TODO 02 - Create a thread (t1) to run counter
+    Thread t1 = new Thread(counter, "T1");
 
     // TODO 03 - Create a thread (t2) to run counter
+    Thread t2 = new Thread(counter, "T2");
 
     // TODO 04 - delete these two lines, and start the threads
+    /*
     counter.oneToTen();
     counter.oneToTen();
+     */
+    t1.start();
+    t2.start();
 
     // TODO 07 - use join so that the 2nd thread starts *after* the first
 
